@@ -1,0 +1,18 @@
+---
+const items = [
+  { name: "Classic Sourdough", price: "$8" },
+  { name: "Chocolate Croissant", price: "$4.50" },
+  { name: "Cinnamon Roll", price: "$4" },
+  { name: "Raspberry Tart", price: "$6" },
+];
+---
+
+<h1>Menu</h1>
+
+<ul>
+  {items.map(item => (
+    <li><strong>{item.name}</strong> – {item.price}</li>
+  ))}
+</ul>
+
+<a href="/">Back Home</a>

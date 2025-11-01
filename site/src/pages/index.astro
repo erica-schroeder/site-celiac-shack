@@ -1,0 +1,15 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const page = await getEntry('pages', 'home');
+const { data, body } = page; // data = frontmatter
+const { title } = data;
+---
+
+<BaseLayout title={title}>
+  <h1 class="text-3xl font-bold mb-4">{title}</h1>
+  <article class="prose">
+    {body}
+  </article>
+</BaseLayout>

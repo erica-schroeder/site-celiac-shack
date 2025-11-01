@@ -1,0 +1,18 @@
+---
+import MobileMenu from "./MobileMenu.astro";
+---
+
+<header class="h-50 w-full bg-header shadow-sm sticky top-0 z-50">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between">
+    <img src="/logo-cropped.png" alt="Bakery Logo" class="mr-4 h-50" />
+
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex gap-6 font-medium">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+
+    <!-- Mobile menu button -->
+    <MobileMenu />
+  </nav>
+</header>
