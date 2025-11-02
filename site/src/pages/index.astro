@@ -1,15 +1,14 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Prose from "../components/Prose.astro";
 
-const page = await getEntry('pages', 'home');
-const { data, body } = page; // data = frontmatter
-const { title } = data;
+const page = await getEntry("pages", "home");
+const { Content } = await render(page);
 ---
 
-<BaseLayout title={title}>
-  <h1 class="text-3xl font-bold mb-4">{title}</h1>
-  <article class="prose">
-    {body}
-  </article>
+<BaseLayout title={page.data.title}>
+  <Prose>
+    <Content />
+  </Prose>
 </BaseLayout>

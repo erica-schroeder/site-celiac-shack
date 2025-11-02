@@ -7,6 +7,10 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="en">
     <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
@@ -17,8 +21,31 @@ const { title, description } = Astro.props;
     </head>
     <body class="bg-background text-stone-900">
         <Header client:load />
-        <main class="max-w-4xl mx-auto px-4 py-10">
+        <main class="max-w-4xl mx-auto px-10 py-10">
             <slot />
         </main>
+        <footer
+            class="mt-16 border-t border-neutral-200/50 pt-8 pb-6 text-sm text-neutral-600"
+        >
+            <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center space-y-4">
+                <!-- Social icons -->
+                <div class="flex justify-center gap-5 text-xl">
+                    <a
+                        href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-Free-Desserts/61582682039160/"
+                        aria-label="Facebook"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="hover:text-neutral-800 transition"
+                    >
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <p class="text-xs text-neutral-500">
+                    © {new Date().getFullYear()} The Celiac Shack — All rights reserved
+                </p>
+            </div>
+        </footer>
     </body>
 </html>

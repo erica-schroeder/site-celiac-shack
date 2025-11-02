@@ -1,27 +1,28 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @font-face {
-  font-family: "LexendGiga";
-  src: url("/fonts/LexendGiga-Bold.ttf") format("truetype");
-  font-weight: 700;
+  font-family: "Alice";
+  src: url("/fonts/Alice-Regular.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
+}
+
+.prose ul li {
+  margin-bottom: 0.25rem; /* reduce vertical spacing */
+  margin-top: 0.25rem; /* reduce vertical spacing */
 }
 
 @theme {
   --color-primary: oklch(0.45 0.26 264);
   --color-header-bg: oklch(0.9585 0.0098 87.47);
   --color-header-text: oklch(0.3 0.04 72.1);
+  --color-header-accent: oklch(0.4 0.07 142.92);
   --color-background: oklch(0.98 0 0);
   --font-display: "Satoshi", "sans-serif";
-  --font-heading: "LexendGiga", "sans-serif";
+  --font-heading: "Alice", "sans-serif";
   --breakpoint-3xl: 120rem;
-  --color-avocado-100: oklch(0.99 0 0);
-  --color-avocado-200: oklch(0.98 0.04 113.22);
-  --color-avocado-300: oklch(0.94 0.11 115.03);
-  --color-avocado-400: oklch(0.92 0.19 114.08);
-  --color-avocado-500: oklch(0.84 0.18 117.33);
-  --color-avocado-600: oklch(0.53 0.12 118.34);
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
   /* ... */
