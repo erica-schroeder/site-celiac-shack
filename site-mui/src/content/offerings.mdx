@@ -1,0 +1,65 @@
+import CookiesPhoto from '@/assets/photos/cookies.jpg';
+import AppleBourbonCakePhoto from '@/assets/photos/apple-bourbon-cake.jpg';
+import SconesPhoto from '@/assets/photos/scones.jpg';
+import { GridLayout } from '@/pages/offerings/GridLayout';
+import { ImageWithCaption } from '@/components/ImageWithCaption';
+
+# Our Offerings
+See the treats we have to offer!
+
+Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-Free-Desserts/61582682039160/" target="_blank" rel="noopener noreferrer">Facebook page</a> for seasonal items.
+
+<br/>
+
+<GridLayout
+sections={[{
+    left: <>
+            <h2>Cookies</h2>
+            <ul>
+                  <li>Sugar Sprinkles</li>
+                  <li>Chocolate Peanut Butter</li>
+                  <li>Gingersnaps</li>
+                  <li>Oatmeal Raisin</li>
+                  <li>Classic Chocolate Chip</li>
+            </ul>
+          </>,
+    right: 
+        <ImageWithCaption
+           src={CookiesPhoto}
+           alt="Sugar Sprinkle Cookies" 
+           caption="Sugar Sprinkle Cookies" 
+        />
+   }, {
+   left: <>
+           <h2>Cakes & Crumbles</h2>
+           <ul>
+                 <li>Apple Bourbon Cake</li>
+                 <li>Vanilla Cupcake with Buttercream Frosting</li>
+                 <li>Chocolate Cupcake with Buttercream Frosting</li>
+                 <li>Fudgy Chocolate Torte</li>
+                 <li>Blueberry Coffee Cake with Streusel Topping</li>
+                 <li>Old Fashioned Apple Crisp</li>
+                 <li>Pecan Praline Cheesecake</li>
+           </ul>
+         </>,
+     right:
+       <ImageWithCaption
+          src={AppleBourbonCakePhoto}
+          alt="Apple Bourbon Cake" 
+          caption="Apple Bourbon Cake" 
+       />
+   }, {
+   left: <>
+           <h2>Muffins & Scones</h2>
+           <ul>
+                 <li>Carrot Spice Mini Muffins</li>
+                 <li>Cream Scones</li>
+           </ul>
+         </>,
+     right:
+       <ImageWithCaption
+          src={SconesPhoto}
+          alt="Cream Scones" 
+          caption="Cream Scones" 
+       />
+}]} />

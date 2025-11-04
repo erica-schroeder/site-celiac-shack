@@ -45,6 +45,7 @@ let theme = createTheme({
         h2: {
             fontFamily: 'Alice',
             fontWeight: 'bold',
+            fontSize: '1.5rem',
             color: palette.appBar.contrastText
         },
         h3: {
