@@ -27,9 +27,11 @@ const palette = {
     },
     appBar: {
         main: '#f4f1ea',
-        contrastText: "#3a2a16",
+        contrastText: '#3a2a16',
+    },
+    heading: {
+        main: '#3a2a16',
     }
-
 };
 
 let theme = createTheme({
@@ -40,18 +42,18 @@ let theme = createTheme({
             fontFamily: 'Alice',
             fontWeight: 'bold',
             fontSize: '2rem',
-            color: palette.appBar.contrastText
+            color: palette.heading.main,
         },
         h2: {
             fontFamily: 'Alice',
             fontWeight: 'bold',
             fontSize: '1.5rem',
-            color: palette.appBar.contrastText
+            color: palette.heading.main,
         },
         h3: {
             fontFamily: 'Alice',
             fontWeight: 'bold',
-            color: palette.appBar.contrastText
+            color: palette.heading.main,
         },
         body1: {
             textAlign: 'justify',

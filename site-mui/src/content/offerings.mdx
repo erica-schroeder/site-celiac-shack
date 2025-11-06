@@ -1,10 +1,16 @@
-import CookiesPhoto from '@/assets/photos/cookies.jpg';
+import SugarCookiesPhoto from '@/assets/photos/cookies.jpg';
+import GingersnapsPhoto from '@/assets/photos/gingersnaps-1x1.jpg';
+
 import AppleBourbonCakePhoto from '@/assets/photos/apple-bourbon-cake.jpg';
+import RedVelvetPhoto from '@/assets/photos/red-velvet-cupcakes-1x1.jpg';
+import WhiteChocolateCheesecakePhoto from '@/assets/photos/white-chocolate-cheesecake-1x1.jpg';
+
 import SconesPhoto from '@/assets/photos/scones.jpg';
-import { GridLayout } from '@/pages/offerings/GridLayout';
+import CarrotMuffinsPhoto from '@/assets/photos/carrot-muffins.jpg';
+
 import { MenuSection, MenuItemRow } from '@/pages/offerings/MenuSection';
 import { ImageWithCaption } from '@/components/ImageWithCaption';
-import { Grid, Box } from '@mui/material';
+import { PhotoCarousel } from '@/components/PhotoCarousel';
 
 # Our Offerings
 See the treats we have to offer!
@@ -17,11 +23,20 @@ Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-F
 <MenuSection
   title="Cookies"
   image={
+  <PhotoCarousel>
         <ImageWithCaption
-           src={CookiesPhoto}
+           noMargin
+           src={SugarCookiesPhoto}
            alt="Sprinkle Sugar Cookies" 
            caption="Sprinkle Sugar Cookies" 
         />
+        <ImageWithCaption
+           noMargin
+           src={GingersnapsPhoto}
+           alt="Spicy Gingersnaps" 
+           caption="Spicy Gingersnaps" 
+        />
+  </PhotoCarousel>
         }
 >
   <MenuItemRow name="Chocolate Peanut Butter" price="$32.00/doz" />
@@ -34,12 +49,27 @@ Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-F
 <MenuSection
   title="Cakes & Crumbles"
   image={
-       <ImageWithCaption
-          src={AppleBourbonCakePhoto}
-          alt="Apple Bourbon Cake" 
-          caption="Apple Bourbon Cake" 
-       />
-        }
+  <PhotoCarousel>
+     <ImageWithCaption
+        noMargin
+        src={RedVelvetPhoto}
+        alt="Red Velvet Cupcakes" 
+        caption="Red Velvet Cupcakes" 
+     />
+     <ImageWithCaption
+        noMargin
+        src={AppleBourbonCakePhoto}
+        alt="Apple Bourbon Cake" 
+        caption="Apple Bourbon Cake" 
+     />
+     <ImageWithCaption
+        noMargin
+        src={WhiteChocolateCheesecakePhoto}
+        alt="White Chocolate Cheesecake" 
+        caption="White Chocolate Cheesecake" 
+     />
+  </PhotoCarousel>
+  }
 >
   <MenuItemRow name="Vanilla or Chocolate Cupcakes with Buttercream Frosting" price="$30.00/doz" />
   <MenuItemRow name="Red Velvet Cupcakes" price="$28.00/doz" />
@@ -54,12 +84,21 @@ Check out our <a href="https://www.facebook.com/people/The-Celiac-Shack-Gluten-F
 <MenuSection
   title="Muffins & Scones"
   image={
+  <PhotoCarousel>
        <ImageWithCaption
+       noMargin
           src={SconesPhoto}
           alt="Cream Scones" 
           caption="Cream Scones" 
        />
-        }
+       <ImageWithCaption
+       noMargin
+          src={CarrotMuffinsPhoto}
+          alt="Carrot Spice Mini Muffins" 
+          caption="Carrot Spice Mini Muffins" 
+       />
+  </PhotoCarousel>
+  }
 >
   <MenuItemRow name="Carrot Spice Mini Muffins" price="$28.00/two doz" />
   <MenuItemRow name="Cream Scones" price="$30.00/doz" />

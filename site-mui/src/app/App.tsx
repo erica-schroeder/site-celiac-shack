@@ -11,7 +11,7 @@ import { OfferingsPage } from '../pages/offerings/OfferingsPage';
 export const App: React.FC = () => {
   return (
     <AppBarNavLayout
-      containerProps={{ maxWidth: 'md' }}
+      containerProps={{ maxWidth: 'lg' }}
       logo={<ClickableLogo />}
       navItems={[{
         label: 'About', to: '/about'

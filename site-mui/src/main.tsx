@@ -6,7 +6,6 @@ import { App } from './app/App.tsx';
 import { theme } from './app/theme.ts';
 import '@fontsource/alice/400.css';
 import '@fontsource/open-sans/400.css';
-import '@fontsource/quicksand/400.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
